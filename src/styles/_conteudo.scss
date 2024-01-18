@@ -1,0 +1,125 @@
+@use 'variaveis';
+
+.conteudo {
+    padding: 5.6vw;
+    min-height: 80vh;
+
+    &__tabs{
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+
+        &__button{
+            color: variaveis.$corTextoPrincipal;
+            font-size: 24px;
+            padding: 0 4px;
+            border: none;
+            padding-bottom: 5px;
+            background-color: variaveis.$corDeFundo;
+            text-transform: uppercase;
+            margin: 0 1vw;
+            cursor: pointer;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid transparent;
+
+            &--is-active {
+                border-bottom: 5px solid variaveis.$corBotaoWatch;
+                border-left: 5px solid variaveis.$corBotaoWatch;
+            }
+        }
+    }
+}
+
+.container {
+    display: none;
+
+    &--is-active{
+        display: contents;
+    }
+}
+
+.conteudo__tab__one {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    img {
+        max-width: 100%;
+        max-height: 80%;
+    }
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    a {
+        padding: 10px;
+        border: solid 1px white;
+        border-radius: 10px;
+        margin-left: 6px;
+        color: white;
+        text-decoration: none;
+    }
+
+    p {
+        margin-top: 24px;
+    }
+}
+
+.conteudo__tab__two {
+    display: block;
+    align-items: center;
+    
+    
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    ul {
+        list-style-type: none;
+        align-items: center;
+        margin-top: 48px;
+    }
+
+    li {
+        margin-left: 24px;
+        margin-bottom: 12px;
+    }
+}
+
+.conteudo__tab__three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+
+    img {
+        max-width: 100%;
+        max-height: 60%;
+        padding: 10px;
+    }
+
+    div {
+        position: relative;
+    }
+
+    div:hover {
+        span {
+            visibility: visible;
+        }
+
+    }
+
+    span { 
+        background-color: variaveis.$corBotaoWatch;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        visibility: hidden;
+        
+    }
+
+}
+

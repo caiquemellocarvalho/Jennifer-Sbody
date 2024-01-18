@@ -1,0 +1,85 @@
+@use 'variaveis';
+@use 'hero';
+@use 'conteudo';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal
+}
+
+.text--big {
+    @include text(24px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+@mixin title($fontSize:28px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoLegenda
+}
+
+.title {
+    @include title;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0; 
+
+    &--is-hidden {
+        background-color: transparent;
+
+        a {
+            visibility: hidden;
+        }
+    }
+}
+
+header a {
+    display: block;
+    width: 8%;
+    padding: 16px;
+    position: absolute;
+    right: 0;
+    margin-top: 24px;
+    margin-right: 24px;
+    border: solid 1px variaveis.$corTextoPrincipal;
+    background-color: variaveis.$corBotaoWatch;
+    border-radius: 10px;
+    margin-left: 6px;
+    color: variaveis.$corTextoPrincipal;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover{
+        background-color: lighten(variaveis.$corBotaoWatch, 6%);
+    }
+}
+
+footer {
+    display: flex;
+   justify-content: center;
+    margin: 40px auto;
+    
+}
