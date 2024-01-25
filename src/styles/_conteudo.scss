@@ -26,6 +26,10 @@
                 border-bottom: 5px solid variaveis.$corBotaoWatch;
                 border-left: 5px solid variaveis.$corBotaoWatch;
             }
+
+            @media (max-height: 768px) {
+                font-size: 12px;
+            }
         }
     }
 }
@@ -42,6 +46,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+
+    @media (max-height: 768px) {
+        grid-template-columns: 1fr;
+    }
+
 
     img {
         max-width: 100%;
@@ -91,6 +100,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+
+    @media (max-height: 768px) {
+        grid-template-columns: 1fr;
+    }
 
 
     img {

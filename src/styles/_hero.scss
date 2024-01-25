@@ -6,6 +6,11 @@
     background-image: url(../images/jennifers_body_hero.png);
     background-size: cover;
 
+    @media (max-height: 768px) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
     &__content {
         max-width: 100%;
         max-height: 100%;
@@ -31,6 +36,15 @@
                 background-color: lighten(variaveis.$corBotaoWatch, 6%);
             }
             
+            @media (max-height: 768px) {
+                width: 120px;
+                height: 40px;
+                font-size: 12px;
+                margin-top: 400px;
+                margin-left: 120px;
+            }
+
         }
     }
+
 }
